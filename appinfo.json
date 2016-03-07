@@ -1,0 +1,20 @@
+{
+  "uuid": "08509ec2-0545-495a-a378-da15d0e9a10b",
+  "shortName": "clay-demo",
+  "longName": "clay-demo",
+  "companyName": "MakeAwesomeHappen",
+  "versionLabel": "1.0",
+  "sdkVersion": "3",
+  "targetPlatforms": ["aplite", "basalt", "chalk"],
+  "enableMultiJS": true,
+  "watchapp": {
+    "watchface": true
+  },
+  "appKeys": {
+    "BACKGROUND_COLOR": 0,
+    "TEXT_COLOR": 1
+  },
+  "resources": {
+    "media": []
+  }
+}
