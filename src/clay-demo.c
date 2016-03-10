@@ -56,7 +56,6 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
   // Read tuples for data
   Tuple *background_color_tuple = dict_find(iterator, BACKGROUND_COLOR);
   Tuple *text_color_tuple = dict_find(iterator, TEXT_COLOR);
-  Tuple *show_date_tuple = dict_find(iterator, SHOW_DATE);
 
   // If all data is available, use it
   if (background_color_tuple) {
@@ -67,11 +66,6 @@ static void inbox_received_callback(DictionaryIterator *iterator, void *context)
   if (text_color_tuple) {
     s_text_color = GColorFromHEX(text_color_tuple->value->int32);
     persist_write_int(TEXT_COLOR, text_color_tuple->value->int32);
-  }
-
-  if (show_date_tuple) {
-    s_show_date = show_date_tuple->value->int32;
-    persist_write_int(TEXT_COLOR, show_date_tuple->value->int32);
   }
 
   update_time();
