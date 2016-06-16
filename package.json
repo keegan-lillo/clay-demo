@@ -1,0 +1,41 @@
+{
+  "version": "1.0.0",
+  "author": "MakeAwesomeHappen",
+  "private": true,
+  "keywords": [
+    "pebble-app"
+  ],
+  "pebble": {
+    "sdkVersion": "3",
+    "resources": {
+      "media": []
+    },
+    "projectType": "native",
+    "uuid": "08509ec2-0545-495a-a378-da15d0e9a10b",
+    "messageKeys": [
+      "BACKGROUND_COLOR",
+      "TEXT_COLOR",
+      "THINGS[3]",
+      "TOGGLES[2]"
+    ],
+    "enableMultiJS": true,
+    "displayName": "clay-demo",
+    "watchapp": {
+      "onlyShownOnCommunication": false,
+      "hiddenApp": false,
+      "watchface": true
+    },
+    "targetPlatforms": [
+      "aplite",
+      "basalt",
+      "chalk"
+    ],
+    "capabilities": [
+      "configurable"
+    ]
+  },
+  "name": "clay-demo",
+  "dependencies": {
+    "pebble-clay": "^1.0.0"
+  }
+}

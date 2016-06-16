@@ -8,20 +8,39 @@ module.exports = [
       {
         "type": "heading",
         "size": 1,
-        "defaultValue": "Clay Demo"
+        "defaultValue": "Clay Demo 😁 ♥ 這兩個字是"
       },
       {
         "type": "color",
-        "appKey": "BACKGROUND_COLOR",
+        "messageKey": "BACKGROUND_COLOR",
         "defaultValue": "000055",
         "label": "Background Color"
       },
       {
         "type": "color",
-        "appKey": "TEXT_COLOR",
+        "messageKey": "TEXT_COLOR",
         "defaultValue": "ffffff",
         "label": "Text Color"
-      }
+      },
+      {
+        "type": "toggle",
+        "label": "Toggle 1",
+        "messageKey": "TOGGLE[0]",
+        "defaultValue": false
+      },
+      {
+        "type": "toggle",
+        "label": "Toggle 2",
+        "messageKey": "TOGGLE[1]",
+        "defaultValue": true
+      },
+      {
+        "type": "checkboxgroup",
+        "defaultValue": [false, true],
+        "label": "Checkbox Group",
+        "messageKey": "THINGS",
+        "options": ["First thing",  "Another thing",  "Final thing"]
+      },
     ]
   },
   {
@@ -48,7 +67,6 @@ module.exports = [
       },
       {
         "type": "input",
-        "appKey": "email",
         "defaultValue": "",
         "label": "Input Field",
         "description": "This is a description for the input component. " +
@@ -59,7 +77,6 @@ module.exports = [
       },
       {
         "type": "slider",
-        "appKey": "slider",
         "defaultValue": 15,
         "label": "Slider",
         description: "This is the description for the slider",
@@ -69,20 +86,17 @@ module.exports = [
       },
       {
         "type": "toggle",
-        "appKey": "cool_stuff",
         "label": "This is a Toggle",
         "defaultValue": false
       },
       {
         "type": "color",
-        "appKey": "colorTest",
         "defaultValue": "FF0000",
         "label": "Standard Color Picker",
         "sunlight": false
       },
       {
         "type": "color",
-        "appKey": "sunnyColorTest",
         "defaultValue": "00FF00",
         "label": "Sunny Color Picker",
         "sunlight": true
@@ -106,7 +120,6 @@ module.exports = [
       },
       {
         "type": "radiogroup",
-        "appKey": "radiogroup-test",
         "label": "Radio Group",
         "options": [
           { "label": "Test thing", "value": "one" },
@@ -115,19 +128,7 @@ module.exports = [
         ]
       },
       {
-        "type": "checkboxgroup",
-        "appKey": "checkboxgroup-test",
-        "defaultValue": ["quote' \"test", "two"],
-        "label": "Checkbox Group",
-        "options": [
-          { "label": "First thing", "value": "three" },
-          { "label": "Another thing", "value": "two" },
-          { "label": "Final thing", "value": "three" }
-        ]
-      },
-      {
         "type": "select",
-        "appKey": "flavor",
         "defaultValue": "grape",
         "label": "Select Menu",
         "options": [
