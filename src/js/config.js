@@ -21,26 +21,7 @@ module.exports = [
         "messageKey": "TEXT_COLOR",
         "defaultValue": "ffffff",
         "label": "Text Color"
-      },
-      {
-        "type": "toggle",
-        "label": "Toggle 1",
-        "messageKey": "TOGGLE[0]",
-        "defaultValue": false
-      },
-      {
-        "type": "toggle",
-        "label": "Toggle 2",
-        "messageKey": "TOGGLE[1]",
-        "defaultValue": true
-      },
-      {
-        "type": "checkboxgroup",
-        "defaultValue": [false, true],
-        "label": "Checkbox Group",
-        "messageKey": "THINGS",
-        "options": ["First thing",  "Another thing",  "Final thing"]
-      },
+      }
     ]
   },
   {

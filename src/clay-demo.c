@@ -3,11 +3,6 @@
 static Window *s_main_window;
 static TextLayer *s_time_layer;
 
-enum APP_MESSAGE_KEYS {
-  BACKGROUND_COLOR,
-  TEXT_COLOR
-};
-
 static GColor s_background_color;
 static GColor s_text_color;
 static int s_show_date;
@@ -54,18 +49,19 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
 
 static void inbox_received_callback(DictionaryIterator *iterator, void *context) {
   // Read tuples for data
-  Tuple *background_color_tuple = dict_find(iterator, BACKGROUND_COLOR);
-  Tuple *text_color_tuple = dict_find(iterator, TEXT_COLOR);
+  Tuple *background_color_tuple = dict_find(iterator, MESSAGE_KEY_BACKGROUND_COLOR);
+  Tuple *text_color_tuple = dict_find(iterator, MESSAGE_KEY_TEXT_COLOR);
 
   // If all data is available, use it
   if (background_color_tuple) {
+    APP_LOG(APP_LOG_LEVEL_INFO, "Background Color: %d", (int)background_color_tuple->value->int32);
     s_background_color = GColorFromHEX(background_color_tuple->value->int32);
-    persist_write_int(BACKGROUND_COLOR, background_color_tuple->value->int32);
+    persist_write_int(MESSAGE_KEY_BACKGROUND_COLOR, background_color_tuple->value->int32);
   }
 
   if (text_color_tuple) {
     s_text_color = GColorFromHEX(text_color_tuple->value->int32);
-    persist_write_int(TEXT_COLOR, text_color_tuple->value->int32);
+    persist_write_int(MESSAGE_KEY_TEXT_COLOR, text_color_tuple->value->int32);
   }
 
   update_time();
@@ -85,13 +81,13 @@ static void outbox_sent_callback(DictionaryIterator *iterator, void *context) {
 
 static void init(void) {
 
-  s_background_color = GColorFromHEX(persist_exists(BACKGROUND_COLOR) ?
-                                     persist_read_int(BACKGROUND_COLOR) :
+  s_background_color = GColorFromHEX(persist_exists(MESSAGE_KEY_BACKGROUND_COLOR) ?
+                                     persist_read_int(MESSAGE_KEY_BACKGROUND_COLOR) :
                                      PBL_IF_COLOR_ELSE(0x000055, 0x000000)
   );
 
-  s_text_color = GColorFromHEX(persist_exists(TEXT_COLOR) ?
-                               persist_read_int(TEXT_COLOR) :
+  s_text_color = GColorFromHEX(persist_exists(MESSAGE_KEY_TEXT_COLOR) ?
+                               persist_read_int(MESSAGE_KEY_TEXT_COLOR) :
                                0xffffff
   );
 

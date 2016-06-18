@@ -14,9 +14,7 @@
     "uuid": "08509ec2-0545-495a-a378-da15d0e9a10b",
     "messageKeys": [
       "BACKGROUND_COLOR",
-      "TEXT_COLOR",
-      "THINGS[3]",
-      "TOGGLES[2]"
+      "TEXT_COLOR"
     ],
     "enableMultiJS": true,
     "displayName": "clay-demo",
@@ -28,7 +26,8 @@
     "targetPlatforms": [
       "aplite",
       "basalt",
-      "chalk"
+      "chalk",
+      "diorite"
     ],
     "capabilities": [
       "configurable"
@@ -36,6 +35,6 @@
   },
   "name": "clay-demo",
   "dependencies": {
-    "pebble-clay": "^1.0.0"
+    "pebble-clay": "file:///Users/keegan/eclipse_workspace/clay"
   }
 }
