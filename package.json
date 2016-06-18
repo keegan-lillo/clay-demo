@@ -35,6 +35,6 @@
   },
   "name": "clay-demo",
   "dependencies": {
-    "pebble-clay": "file:///Users/keegan/eclipse_workspace/clay"
+    "pebble-clay": "^1.0.1"
   }
 }
