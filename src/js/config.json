@@ -1,0 +1,28 @@
+[
+  {
+    "type": "section",
+    "items": [
+      {
+        "type": "heading",
+        "size": 1,
+        "defaultValue": "Clay Demo"
+      },
+      {
+        "type": "color",
+        "messageKey": "BACKGROUND_COLOR",
+        "defaultValue": "000055",
+        "label": "Background Color"
+      },
+      {
+        "type": "color",
+        "messageKey": "TEXT_COLOR",
+        "defaultValue": "ffffff",
+        "label": "Text Color"
+      }
+    ]
+  },
+  {
+    "type": "submit",
+    "defaultValue": "Save"
+  }
+]

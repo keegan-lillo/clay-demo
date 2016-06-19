@@ -26,8 +26,7 @@
     "targetPlatforms": [
       "aplite",
       "basalt",
-      "chalk",
-      "diorite"
+      "chalk"
     ],
     "capabilities": [
       "configurable"
@@ -35,6 +34,7 @@
   },
   "name": "clay-demo",
   "dependencies": {
+    "enamel": "^1.0.1",
     "pebble-clay": "^1.0.1"
   }
 }
