@@ -34,7 +34,7 @@
   },
   "name": "clay-demo",
   "dependencies": {
-    "enamel": "^1.0.1",
+    "enamel": "^1.0.3",
     "pebble-clay": "^1.0.1"
   }
 }
